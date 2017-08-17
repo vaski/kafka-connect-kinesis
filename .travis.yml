@@ -19,4 +19,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    repo: jessecollier/kafka-connect-kinesis
+    repo: vaski/kafka-connect-kinesis
