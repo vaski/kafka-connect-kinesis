@@ -3,10 +3,10 @@ sudo: false
 addons:
   apt:
     packages:
-      - oracle-java8-installer
+    - oracle-java8-installer
 jdk:
   - oraclejdk8
-script: 
+script:
   - jdk_switcher use oraclejdk8
   - mvn clean package
 before_deploy:
@@ -20,3 +20,6 @@ deploy:
   on:
     tags: true
     repo: vaski/kafka-connect-kinesis
+env:
+  global:
+    secure: aoOSLzLrrct9Y2mNUFTipBurLGAR798krNIaXrcpTEmj5oro8yc99YE53iPpnGhDm1Bj3+VwQqucxChS7058Jtglym8R5OiLIvRXs6eDDNKshDk9sJ4Ab+rye2bHYa14QP5G0sjrQVQ4yVZLorFDgILtZDBM4D/PirLSE1GQ+rNH9Wo1H/NaqceWkfgcXUY3sF6elXhCV1Mi7WX0iRyYtwl1fIZQpMnbspl4GMPBpigJ8dZaQWDdRM6+FHUChYdo8hQxULywvHlWmZfl6x2sQ0GZoRCNBVa7VbW1IcuoaJ9beOkTfFWQuFHYSIBi5XxeR7UCIWv8TBeO/bIzhdlCvJdu5Kt3y52/AOQdXl3XrU5ep+PUqBbO008tUH6OMHuzRT15IomMl3+y/07/QNzQv+SNhTfhqRkQZbQGYGXuLCguW71hWfL5SdGLk4LLtgGw70+vKLFcTlOZbNisLsp2KhplQM3RSrUa4KEilnbIDFA0s565qPevZOyA/zL61QB7f6BpqIS7kAlAb/ByUmXZXZip8OAaCoToi3tN4D/i1dAr2MvPHGc+eGEOOrvpxJVBxmOwJecQqsbzReUbqX4mvhPKJJ1VQd+WW493GfIaeiy8gMEpZ1MdyLIeYz210jPqVgwmaELd3saH1w31IwPoj3wGxQg+BKUxYypcehJFR3c=
